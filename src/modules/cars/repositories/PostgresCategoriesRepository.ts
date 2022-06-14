@@ -6,13 +6,13 @@ import {
 
 class PostgresCategoriesRepository implements ICategoriesRepository {
   findByName(name: string): Category {
-    throw new Error('Method not implemented.');
+    throw new Error(name);
   }
   list(): Category[] {
     throw new Error('Method not implemented.');
   }
   create({ name, description }: ICreateCategoryDTO): void {
-    throw new Error('Method not implemented.');
+    throw new Error(description, name);
   }
 }
 
