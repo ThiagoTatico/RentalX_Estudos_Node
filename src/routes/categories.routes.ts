@@ -5,14 +5,9 @@ import { CreateCategoryUseCase } from '../modules/cars/useCases/createCategory/C
 
 const categoriesRoutes = Router();
 const categoriesRepository = new CategoriesRepository();
-const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
 
 categoriesRoutes.post('/', (req, res) => {
-  const { name, description } = req.body;
 
-  createCategoryUseCase.execute({ name, description });
-
-  return res.status(201).send();
 });
 
 categoriesRoutes.get('/', (req, res) => {
