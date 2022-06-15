@@ -1,3 +1,0 @@
-class CreateSpecificationCrontroller {}
-
-export { CreateSpecificationCrontroller };
