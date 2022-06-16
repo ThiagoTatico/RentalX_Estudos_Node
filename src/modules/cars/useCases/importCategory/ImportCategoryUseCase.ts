@@ -32,12 +32,16 @@ class ImportCategoryUseCase {
         })
         .on('end', () => {
           resolve(categories);
+        })
+        .on('error', err => {
+          reject(err);
         });
     });
   }
 
-  execute(file: Express.Multer.File) {
-
+  async execute(file: Express.Multer.File) {
+    const categories = await this.loadCategories(file);
+    console.log(categories);
   }
 }
 
