@@ -9,7 +9,7 @@ import {
 class CategoriesRepository implements ICategoriesRepository {
   private repository: Repository<Category>;
 
-  public constructor() {
+  constructor() {
     this.repository = getRepository(Category);
   }
 
